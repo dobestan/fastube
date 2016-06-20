@@ -127,6 +127,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "fastube", "static"),
 ]
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(PROJECT_ROOT_DIR, "dist", "static")
 
 
 # Auth
