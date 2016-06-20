@@ -1,9 +1,7 @@
-{% load staticfiles %}<!DOCTYPE html>
+{% load pipeline %}<!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="{% static "css/application.css" %}">
-    <link rel="stylesheet" href="{% static "css/partials/header.css" %}">
-    <link rel="stylesheet" href="{% static "css/partials/footer.css" %}">
+    {% stylesheet "fastube" %}
   </head>
   <body>
     {% include "partials/header.html" %}
