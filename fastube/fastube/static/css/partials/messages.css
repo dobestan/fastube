@@ -1,0 +1,7 @@
+#messages .success {
+  color: green;
+}
+
+#messages .error {
+  color: red;
+}
