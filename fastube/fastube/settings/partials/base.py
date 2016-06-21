@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'pipeline',
+    'social.apps.django_app.default',
 
     'users',
 ]
@@ -70,6 +71,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
+                'social.apps.django_app.context_processors.backends',
+                'social.apps.django_app.context_processors.login_redirect',
             ],
         },
     },
@@ -160,3 +164,7 @@ LOGIN_URL = "/login/"
 SIGNUP_SUCCESS_MESSAGE = "성공적으로 회원가입 되었습니다"
 LOGIN_SUCCESS_MESSAGE = "성공적으로 로그인 되었습니다"
 LOGOUT_SUCCESS_MESSAGE = "성공적으로 로그아웃 되었습니다"
+
+AUTHENTICATION_BACKENDS = [
+    "django.contrib.auth.backends.ModelBackend",
+]
