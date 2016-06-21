@@ -31,7 +31,7 @@ class LoginView(View):
             messages.add_message(
                 request,
                 messages.SUCCESS,
-                settings.LOGOUT_SUCCESS_MESSAGE,
+                settings.LOGIN_SUCCESS_MESSAGE,
             )
 
             return redirect(next_url)
