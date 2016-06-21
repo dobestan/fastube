@@ -166,5 +166,10 @@ LOGIN_SUCCESS_MESSAGE = "성공적으로 로그인 되었습니다"
 LOGOUT_SUCCESS_MESSAGE = "성공적으로 로그아웃 되었습니다"
 
 AUTHENTICATION_BACKENDS = [
+    "social.backends.facebook.FacebookOAuth2",
+
     "django.contrib.auth.backends.ModelBackend",
 ]
+
+SOCIAL_AUTH_FACEBOOK_KEY = "237373486648488"
+SOCIAL_AUTH_FACEBOOK_SECRET = "9a31e73646f72c20d061a81a9563d139"
