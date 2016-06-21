@@ -5,7 +5,7 @@
   <h1>Signup</h1>
 
   <section>
-    <form action="{% url "signup" %}" method="POST">
+    <form action="{% url "users:signup" %}" method="POST">
       {% csrf_token %}
       <input type="text" name="username" placeholder="username" required>
       <input type="password" name="password" placeholder="password" required>

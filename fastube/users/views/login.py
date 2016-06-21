@@ -19,7 +19,7 @@ class LoginView(View):
         username = request.POST.get("username")
         password = request.POST.get("password")
 
-        next_url = request.POST.get("next_url") or reverse("login")  # FIXME: redirect to home
+        next_url = request.POST.get("next_url") or reverse("users:login")  # FIXME: redirect to home
 
         user = authenticate(
             username=username,
@@ -36,4 +36,4 @@ class LoginView(View):
 
             return redirect(next_url)
 
-        return redirect(reverse("login"))
+        return redirect(reverse("users:login"))

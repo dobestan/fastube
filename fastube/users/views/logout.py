@@ -15,4 +15,4 @@ class LogoutView(View):
             messages.SUCCESS,
             settings.LOGOUT_SUCCESS_MESSAGE,
         )
-        return redirect(reverse("login"))
+        return redirect(reverse("users:login"))

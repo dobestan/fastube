@@ -4,14 +4,14 @@
   <ul>
     {% if request.user.is_authenticated %}
       <li>
-        <a href="{% url "logout" %}">logout</a>
+        <a href="{% url "users:logout" %}">logout</a>
       </li>
     {% else %}
       <li>
-        <a href="{% url "login" %}">login</a>
+        <a href="{% url "users:login" %}">login</a>
       </li>
       <li>
-        <a href="{% url "signup" %}">signup</a>
+        <a href="{% url "users:signup" %}">signup</a>
       </li>
     {% endif %}
   </ul>
