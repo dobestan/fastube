@@ -13,4 +13,15 @@
       <input type="submit" value="signup">
     </form>
   </section>
+
+  <section>
+    <ul>
+      <li>
+        <a href="{% url "social:begin" backend="facebook" %}">페이스북으로 회원가입하기</a>
+      </li>
+      <li>
+        <a href="{% url "social:begin" backend="kakao" %}">카카오로 회원가입하기</a>
+      </li>
+    </ul>
+  </section>
 {% endblock %}
