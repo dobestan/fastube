@@ -29,8 +29,7 @@ class PostCreateView(LoginRequiredMixin, View):
             thumbnail_image=thumbnail_image,
         )
 
-        # FIXME: redirect to posts:detail
-        return redirect(reverse("posts:create"))
+        return redirect(post)
 
 
 class PostCreateConfirmView(LoginRequiredMixin, View):
