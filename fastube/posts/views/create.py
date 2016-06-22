@@ -20,10 +20,13 @@ class PostCreateView(LoginRequiredMixin, View):
         title = request.POST.get("title")
         content = request.POST.get("content")
 
+        thumbnail_image = request.FILES.get("thumbnail_image")
+
         post = request.user.post_set.create(
             video_id=video_id,
             title=title,
             content=content,
+            thumbnail_image=thumbnail_image,
         )
 
         # FIXME: redirect to posts:detail
@@ -50,5 +53,7 @@ class PostCreateConfirmView(LoginRequiredMixin, View):
 
                 "youtube_original_url": youtube.get_youtube_original_url(video_id),
                 "youtube_embed_url": youtube.get_youtube_embed_url(video_id),
+
+                "youtube_thumbnail_image_url": youtube.get_youtube_thumbnail_image_url(video_id),
             },
         )

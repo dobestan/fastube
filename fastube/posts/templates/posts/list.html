@@ -8,7 +8,7 @@
   <ul>
     {% for post in posts %}
     <li>
-      <img src="{{ post.youtube_thumbnail_image_url }}" alt="{{ post.title }}">
+      <img src="{{ post.thumbnail_image_url }}" alt="{{ post.title }}">
       <h3>{{ post.title }}</h3>
       <p>{{ post.content }}</p>
       <a href="{{ post.get_absolute_url }}">상세페이지 바로가기</a>

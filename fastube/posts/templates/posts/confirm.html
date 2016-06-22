@@ -10,9 +10,11 @@
   <h3>{{ title }}</h3>
   <p>{{ content }}</p>
 
+  <img src="{{ youtube_thumbnail_image_url }}" alt="{{ title }}">
+
   <a href="{{ youtube_original_url }}" target="_blank">유튜브 링크 바로가기</a>
 
-  <form action="{% url "posts:create" %}" method="POST">
+  <form action="{% url "posts:create" %}" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
 
     <p>위의 정보로 포스트를 생성하시겠습니가?</p>
@@ -20,6 +22,9 @@
 
     <input type="hidden" name="title" value="{{ title }}">
     <input type="hidden" name="content" value="{{ content }}">
+
+    <p>현재의 썸네일 이미지가 마음에 안드시면 새로운 썸네일 이미지로 변경하실 수 있습니다.</p>
+    <input type="file" name="thumbnail_image">
 
     <input type="submit">
   </form>
