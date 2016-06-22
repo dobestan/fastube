@@ -1,1 +1,3 @@
 Django
+django-pipeline
+python-social-auth

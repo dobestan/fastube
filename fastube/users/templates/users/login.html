@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+  <h1>Login</h1>
+
+  <section>
+    <form action="{% url "users:login" %}" method="POST">
+      {% csrf_token %}
+      <input type="text" name="username" placeholder="username" required>
+      <input type="password" name="password" placeholder="password" required>
+      <input type="hidden" name="next" value="{{ request.GET.next }}">
+      <input type="submit" value="login">
+    </form>
+  </section>
+
+  <section>
+    <ul>
+      <li>
+        <a href="{% url "social:begin" backend="facebook" %}">페이스북으로 로그인하기</a>
+      </li>
+      <li>
+        <a href="{% url "social:begin" backend="kakao" %}">카카오로 로그인하기</a>
+      </li>
+    </ul>
+  </section>
+{% endblock %}
