@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<h1>Posts List</h1>
+
+<section>
+  <ul>
+    {% for post in posts %}
+    <li>
+      <img src="{{ post.thumbnail_image_url }}" alt="{{ post.title }}">
+      <h3>{{ post.title }}</h3>
+      <p>{{ post.content }}</p>
+      <a href="{{ post.get_absolute_url }}">상세페이지 바로가기</a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endblock %}
