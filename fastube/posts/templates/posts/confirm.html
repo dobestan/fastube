@@ -12,8 +12,14 @@
 
   <a href="{{ youtube_original_url }}" target="_blank">유튜브 링크 바로가기</a>
 
-  <form action="" method="POST">
+  <form action="{% url "posts:create" %}" method="POST">
+    {% csrf_token %}
+
     <p>위의 정보로 포스트를 생성하시겠습니가?</p>
+    <input type="hidden" name="video_id" value="{{ video_id }}">
+
+    <input type="hidden" name="title" value="{{ title }}">
+    <input type="hidden" name="content" value="{{ content }}">
 
     <input type="submit">
   </form>
