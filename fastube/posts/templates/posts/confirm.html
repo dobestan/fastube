@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<h1>Confirm Post</h1>
+
+<section>
+  <iframe width="560" height="315" src="{{ youtube_embed_url }}" frameborder="0" allowfullscreen></iframe>
+
+  <h3>{{ title }}</h3>
+  <p>{{ content }}</p>
+
+  <a href="{{ youtube_original_url }}" target="_blank">유튜브 링크 바로가기</a>
+
+  <form action="" method="POST">
+    <p>위의 정보로 포스트를 생성하시겠습니가?</p>
+
+    <input type="submit">
+  </form>
+</section>
+{% endblock %}
