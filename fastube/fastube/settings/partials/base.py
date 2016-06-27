@@ -154,6 +154,15 @@ PIPELINE = {
             ),
             'output_filename': 'css/fastube.css',
         }
+    },
+
+    'JAVASCRIPT': {
+        'posts': {
+            'source_filenames': (
+              'js/posts.js',
+            ),
+            'output_filename': 'js/posts.js',
+        }
     }
 }
 
