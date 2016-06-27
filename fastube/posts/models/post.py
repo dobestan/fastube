@@ -36,6 +36,7 @@ class Post(models.Model):
     like_user_set = models.ManyToManyField(
         User,
         related_name="like_post_set",
+        through="Like",
     )
 
     created_at = models.DateTimeField(auto_now_add=True)
