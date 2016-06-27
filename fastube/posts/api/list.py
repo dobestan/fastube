@@ -1,23 +1,9 @@
-import json
-
-from rest_framework.views import APIView
-from rest_framework.response import Response
+from rest_framework.generics import ListAPIView
 
 from posts.models import Post
+from posts.serializers import PostModelSerializer
 
 
-class PostListAPIView(APIView):
-
-    def get(self, request, *args, **kwargs):
-
-        data = [
-            {
-                "title": post.title,
-                "content": post.content,
-                "youtube_original_url": post.youtube_original_url,
-            }
-            for post
-            in Post.objects.all()
-        ]
-
-        return Response(data)
+class PostListAPIView(ListAPIView):
+    queryset = Post.objects.all()
+    serializer_class = PostModelSerializer
