@@ -1,12 +1,12 @@
 import json
 
-from django.views.generic import View
-from django.http.response import HttpResponse
+from rest_framework.views import APIView
+from rest_framework.response import Response
 
 from posts.models import Post
 
 
-class PostListAPIView(View):
+class PostListAPIView(APIView):
 
     def get(self, request, *args, **kwargs):
 
@@ -20,7 +20,4 @@ class PostListAPIView(View):
             in Post.objects.all()
         ]
 
-        return HttpResponse(
-            json.dumps(data),
-            content_type="application/json",
-        )
+        return Response(data)
