@@ -5,3 +5,4 @@ hashids
 Pillow
 requests
 beautifulsoup4
+djangorestframework
