@@ -15,15 +15,10 @@
   <a href="{{ post.youtube_original_url }}" target="_blank">유튜브 링크 바로가기</a>
 </section>
 
-<section id="comments-section">
-  <h3>Comments ( <span id="comments-count">{{ post.comment_set.count }}</span> )</h3>
+<section id="comments-section" data-post-slug="{{ post.hash_id }}">
+  <h3>Comments ( <span id="comments-count"></span> )</h3>
 
   <ul>
-    {% for comment in post.comment_set.all %}
-      <li>
-        {{ comment.user.username }}: {{ comment.content }}
-      </li>
-    {% endfor %}
   </ul>
 
   <form>
