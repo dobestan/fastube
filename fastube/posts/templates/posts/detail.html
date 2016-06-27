@@ -13,4 +13,21 @@
 
   <a href="{{ post.youtube_original_url }}" target="_blank">유튜브 링크 바로가기</a>
 </section>
+
+<section>
+  <h3>Comments ( <span>{{ post.comment_set.count }}</span> )</h3>
+
+  <ul>
+    {% for comment in post.comment_set.all %}
+      <li>
+        {{ comment.user.username }}: {{ comment.content }}
+      </li>
+    {% endfor %}
+  </ul>
+
+  <form>
+    <input type="text" name="content" placeholder="댓글" required>
+    <input type="submit" value="댓글 달기">
+  </form>
+</section>
 {% endblock %}
