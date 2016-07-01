@@ -8,4 +8,4 @@ from notifications.models import SMSNotification, SlackNotification
 @receiver(post_save, sender=SlackNotification)
 def post_save_notification(sender, instance, created, **kwargs):
     if created:
-        pass
+        instance.send_notification()
