@@ -1,2 +1,2 @@
 from .list import PostListAPIView
-from .comments import PostCommentListAPIView
+from .comments import PostCommentListCreateAPIView
