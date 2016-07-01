@@ -1,5 +1,5 @@
 migrate:
-	- python fastube/manage.py makemigrations users posts tags
+	- python fastube/manage.py makemigrations users posts tags notifications
 	- python fastube/manage.py migrate
 
 
