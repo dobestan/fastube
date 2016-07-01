@@ -86,7 +86,7 @@ $(document).ready(function() {
 
         // Update Comments Count
         var commentsCount = $(commentsCountElement).html();
-        var newCommentCount = Number(commentsCount) + 1
+        var newCommentCount = Number(commentsCount) + 1;
         $(commentsCountElement).html(String(newCommentCount));
 
         $(commentsCreateFormInputContentElement).val("");
