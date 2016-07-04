@@ -10,3 +10,5 @@ celery[redis]
 redis
 flower
 dj-database-url
+honcho
+gunicorn
