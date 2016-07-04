@@ -10,6 +10,7 @@ install:
     - pip install -r requirements/development.txt
 before_script:
     - psql -c 'CREATE DATABASE fastube;' -U postgres
+    - make migrate
 script:
     - pep8 .
     - python fastube/manage.py test users posts
