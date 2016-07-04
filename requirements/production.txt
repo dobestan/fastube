@@ -12,3 +12,4 @@ flower
 dj-database-url
 honcho
 gunicorn
+psycopg2
