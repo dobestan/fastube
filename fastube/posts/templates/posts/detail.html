@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load pipeline %}
 
 
 {% block content %}
@@ -13,4 +14,21 @@
 
   <a href="{{ post.youtube_original_url }}" target="_blank">유튜브 링크 바로가기</a>
 </section>
+
+<section id="comments-section" data-post-slug="{{ post.hash_id }}">
+  <h3>Comments ( <span id="comments-count"></span> )</h3>
+
+  <ul>
+  </ul>
+
+  <form>
+    <input type="text" name="content" placeholder="댓글" required>
+    <input type="submit" value="댓글 달기">
+  </form>
+</section>
+{% endblock %}
+
+
+{% block custom_javascripts %}
+  {% javascript "posts" %}
 {% endblock %}
