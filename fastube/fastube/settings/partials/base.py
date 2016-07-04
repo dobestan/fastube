@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'pipeline',
+    'storages',
     'social.apps.django_app.default',
     'rest_framework',
 
